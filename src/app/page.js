@@ -17,7 +17,7 @@ export default function AcaiStore() {
   const acaiProducts = [
     {
       id: 1,
-      name: 'Copo De Açaí 300Ml',
+      name: 'Combo 2 Copo De Açaí 300Ml',
       description: 'Acompanha Nuttela, Frutas, Grenola e Leite Condensado',
       price: 14.90,
       size: '500ml',
@@ -25,7 +25,7 @@ export default function AcaiStore() {
     },
     {
       id: 2,
-      name: 'Copo De Açaí 400Ml',
+      name: 'Combo 2 Copo De Açaí 400Ml',
       description: 'Acompanha Nuttela, Frutas, Grenola e Leite Condensado + cookie chocolate branco',
       price: 18.90,
       size: '400ml',
@@ -33,7 +33,7 @@ export default function AcaiStore() {
     },
     {
       id: 3,
-      name: 'Copo De Açaí 700Ml',
+      name: 'Combo 2 Copo De Açaí 700Ml',
       description: 'Acompanha Nuttela, Frutas, Grenola e Leite Condensado',
       price: 24.90,
       size: '700ml',
@@ -41,7 +41,7 @@ export default function AcaiStore() {
     },
     {
       id: 4,
-      name: 'Copo De Açaí 500Ml',
+      name: 'Combo 2 Copo De Açaí 500Ml',
       description: 'Acompanha Nuttela, Frutas, Grenola e Leite Condensado',
       price: 22.90,
       size: '500ml',
@@ -261,7 +261,7 @@ export default function AcaiStore() {
               <div key={product.id} className="product-card">
                 <Image src={product.image} alt={product.name} className="product-image" />
                 <div className="product-info">
-                  <h3>Combo 2 {product.name}</h3>
+                  <h3>{product.name}</h3>
                   <h3>-50%</h3>
                   <p className="product-description">{product.description}</p>
                   <p className="product-size">Tamanho: {product.size}</p>
