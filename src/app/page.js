@@ -12,6 +12,8 @@ import Copo5 from "./imgs/copo5.jpg"
 
 export default function AcaiStore() {
   // Produtos de açaí
+  const [errorcep, seterrorcep] = useState(false)
+  
   const acaiProducts = [
     {
       id: 1,
@@ -193,15 +195,18 @@ export default function AcaiStore() {
         return res.json()
       })
       .then((data) => {
-        console.log(data)
         setCep(data.cep)
         setCidade(data.localidade)
         setBairro(data.bairro)
         setperguntar(false)
       })
+      .catch(()=>{
+        setperguntar(true)
+        seterrorcep(true)
+      })
     }
     catch {
-
+      console.log("error")
     }
   }
 
@@ -222,6 +227,11 @@ export default function AcaiStore() {
           </div>
           
           <button id="btnEnviar" onClick={consulta}>Buscar Endereço</button>
+          {errorcep ? (
+            <p>CEP NÃO EXISTE</p>
+          ):(
+            <></>
+          )}
         </div>
       ):(
         <></>
@@ -251,7 +261,7 @@ export default function AcaiStore() {
               <div key={product.id} className="product-card">
                 <Image src={product.image} alt={product.name} className="product-image" />
                 <div className="product-info">
-                  <h3>{product.name}</h3>
+                  <h3>Combo 2 {product.name}</h3>
                   <h3>-50%</h3>
                   <p className="product-description">{product.description}</p>
                   <p className="product-size">Tamanho: {product.size}</p>
