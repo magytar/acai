@@ -9,6 +9,7 @@ import Copo2 from "./imgs/copo2.webp"
 import Copo3 from "./imgs/copo3.jpg"
 import Copo4 from "./imgs/copo4.jpg"
 import Copo5 from "./imgs/copo5.jpg"
+import Copo6 from "./imgs/copo6.jpg"
 
 export default function AcaiStore() {
   // Produtos de açaí
@@ -46,6 +47,14 @@ export default function AcaiStore() {
       price: 22.90,
       size: '500ml',
       image: Copo5,
+    },
+    {
+      id: 5,
+      name: 'Combo 2 Copo De Açaí 500Ml, apenas primeiro pedido',
+      description: 'Acompanha Nuttela, Frutas, Grenola e Leite Condensado',
+      price: 19.90,
+      size: '500ml',
+      image: Copo6,
     },
   ];
 
@@ -265,7 +274,7 @@ export default function AcaiStore() {
                   <h3>-50%</h3>
                   <p className="product-description">{product.description}</p>
                   <p className="product-size">Tamanho: {product.size}</p>
-                  <p className="product-size">Frete: R$0,00 Pra cidade {cidade}</p>
+                  <p className="product-size">Frete: R$0,00 Primeira Compra</p>
                   <p className="product-price">R$ {product.price.toFixed(2)}</p>
                   <button 
                     className="add-to-cart-button"
